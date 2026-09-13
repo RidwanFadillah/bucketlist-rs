@@ -94,10 +94,14 @@ if (fs.existsSync(frontendDist)) {
   });
 }
 
-app.listen(PORT, () => {
-  console.log(`====================================================`);
-  console.log(`🚀 Backend Server running at: http://localhost:${PORT}`);
-  console.log(`📁 Uploads Directory: ${uploadsDir}`);
-  console.log(`📊 Google Sheets Integration: Ready`);
-  console.log(`====================================================`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`====================================================`);
+    console.log(`🚀 Backend Server running at: http://localhost:${PORT}`);
+    console.log(`📁 Uploads Directory: ${uploadsDir}`);
+    console.log(`📊 Google Sheets Integration: Ready`);
+    console.log(`====================================================`);
+  });
+}
+
+module.exports = app;
