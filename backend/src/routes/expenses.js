@@ -8,9 +8,13 @@ const { calculateFinanceSummary } = require('../services/financeCalculator');
 const googleSheetsService = require('../services/googleSheetsService');
 
 // Multer storage for receipts
+const uploadsDir = process.env.VERCEL
+  ? path.join('/tmp', 'bucketlist-uploads')
+  : path.join(__dirname, '../../uploads');
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, '../../uploads'));
+    cb(null, uploadsDir);
   },
   filename: function (req, file, cb) {
     const ext = path.extname(file.originalname);
