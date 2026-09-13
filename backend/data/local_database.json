@@ -1,0 +1,17 @@
+{
+  "bucketlist": [],
+  "expenses": [],
+  "savings": [],
+  "events": [],
+  "settings": {
+    "p1Name": "Ridwan",
+    "p2Name": "Princess",
+    "p1Avatar": "",
+    "p2Avatar": "",
+    "currency": "IDR",
+    "theme": "adventure",
+    "googleSheetUrl": "",
+    "googleSheetName": "Database Bucketlist & Keuangan",
+    "lastSyncedAt": null
+  }
+}

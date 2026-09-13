@@ -1,0 +1,14 @@
+{
+  "name": "bucketlist_rs",
+  "version": "1.0.0",
+  "description": "Interactive Travel Bucketlist, Shared Finance for 2 People, & Date Marker with Google Sheets Database",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

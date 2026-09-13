@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+
+# Frontend build output
+frontend/dist/
+
+# Local backend uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
